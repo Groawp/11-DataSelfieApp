@@ -1,0 +1,22 @@
+{
+  "name": "data-selfie-app",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Groawp/11-DataSelfieApp.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Groawp/11-DataSelfieApp/issues"
+  },
+  "homepage": "https://github.com/Groawp/11-DataSelfieApp#readme",
+  "dependencies": {
+    "express": "^4.17.1"
+  }
+}
