@@ -17,16 +17,14 @@
                 const position = document.createElement('div');
                 const date = document.createElement('div');
                 const image = document.createElement('img');
-                root.append(position,date);
-
+                
                 position.textContent = `Mood: ${element.mood}: Latitude: ${element.lat} | Longitude: ${element.lon}`;
                 const dateString = new Date(element.timestamp).toLocaleString();
                 date.textContent = `Timestamp: ${dateString}`;
                 image.src = element.image;
                 
+                root.append(position,date,image);
                 document.body.append(root);
-
-
             });
         }
         

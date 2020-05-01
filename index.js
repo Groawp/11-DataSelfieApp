@@ -48,6 +48,6 @@ app.post('/api',(request,response) => {
     response.json({
         status: `Success with ${adata.lat} and ${adata.lon}`,
         timestamp: timestamp,
-        mood: `Mood: ${adata.mood}`,
+        mood: adata.mood,
     });
 });
