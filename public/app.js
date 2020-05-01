@@ -14,8 +14,10 @@ function setup() {
     })
     
     document.querySelector('#submit').addEventListener('click', async () => {
+        //Capture video to image based 64
         video.loadPixels();
         const image = video.canvas.toDataURL();
+        
         const mood = document.getElementById('mood').value;
         const data = { mood, lat, lon, image };
         const options = {
