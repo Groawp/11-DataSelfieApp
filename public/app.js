@@ -4,9 +4,7 @@ function setup() {
     noCanvas();
     //Create var hold pic through video source (webcam)
     const video = createCapture(VIDEO);
-    video.size(320, 240);
-    video.loadPixels();
-    const image = video.canvas.toDataURL();
+    video.size(160, 120);
     navigator.geolocation.getCurrentPosition(position => {
         console.log(position.coords);
         lat = position.coords.latitude.toFixed(2);
@@ -14,8 +12,10 @@ function setup() {
         document.getElementById('lat').textContent = lat;
         document.getElementById('lon').textContent = lon;
     })
-
+    
     document.querySelector('#submit').addEventListener('click', async () => {
+        video.loadPixels();
+        const image = video.canvas.toDataURL();
         const mood = document.getElementById('mood').value;
         const data = { mood, lat, lon, image };
         const options = {
